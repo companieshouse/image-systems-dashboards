@@ -1,4 +1,4 @@
-resource "aws_cloudwatch_dashboard" "tuxedo" {
+resource "aws_cloudwatch_dashboard" "image_systems" {
   dashboard_name = "image-systems"
 
   dashboard_body = jsonencode({
