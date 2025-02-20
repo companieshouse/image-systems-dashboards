@@ -38,5 +38,5 @@ data "aws_resourcegroupstaggingapi_resources" "frontend_alb_target_groups" {
 
 data "aws_lb_target_group" "frontend_alb" {
   for_each = toset(data.aws_resourcegroupstaggingapi_resources.frontend_alb_target_groups.resource_tag_mapping_list[*].resource_arn)
-  arn = each.key
+  arn      = each.key
 }
